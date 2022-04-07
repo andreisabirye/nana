@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">NANA</string>
+    <string name="title_home">Home</string>
+    <string name="title_requests">Requests</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_login">login</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string-array name="spinner_cities">
+        <item>Kampala</item>
+        <item>Entebbe</item>
+        <item>Kawuku</item>
+        <item>Bwebajja</item>
+        <item>Kitende</item>
+        <item>Lweza</item>
+        <item>Seguku</item>
+        <item>Lubowa</item>
+        <item>Zana</item>
+        <item>Namasuba</item>
+        <item>Najjanankumbi</item>
+        <item>Kibuye</item>
+        <item>Katwe</item>
+    </string-array>
+
+    <string-array name="spinner_services">
+        <item>Pick Services</item>
+        <item>Car Wash</item>
+        <item>Cleaner</item>
+        <item>Cooking</item>
+        <item>Laundry</item>
+        <item>Shopping</item>
+    </string-array>
+
+    <string-array name="spinner_services_premium">
+        <item>Pick Services</item>
+        <item>Car Wash</item>
+        <item>Cleaner</item>
+        <item>Compound</item>
+        <item>Cooking</item>
+        <item>Laundry</item>
+        <item>Shopping</item>
+    </string-array>
+
+    <string-array name="spinner_cartypes">
+        <item>Salon Car</item>
+        <item>SUV Car</item>
+        <item>Bus</item>
+        <item>Lorry</item>
+    </string-array>
+    <string name="title_activity_splashscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

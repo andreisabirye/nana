@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="@color/colorPrimary2"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/settings_back"
+        android:src="@drawable/icon_material_arrow_back_1"
+        android:tint="@color/colorPrimaryDark2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/user_settings_save"
+        android:text="  Save"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent2"
+        android:drawableLeft="@drawable/icon_awesome_check"
+        android:layout_marginLeft="14dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true"
+        android:layout_marginTop="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Settings"
+            android:id="@+id/settings_header"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:layout_marginTop="14dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/user_settings_pic"
+            android:src="@drawable/ic_baseline_person_400"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/user_settings_pic"
+            app:layout_constraintStart_toStartOf="@id/user_settings_pic"
+            app:layout_constraintBottom_toBottomOf="@id/user_settings_pic"
+            app:layout_constraintEnd_toEndOf="@id/user_settings_pic"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:background="#40000000"
+            android:padding="5dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_pic"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"
+            android:text="Name"
+            android:id="@+id/user_settings_name_text"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_name_text"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:id="@+id/user_settings_name">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_settings_name_text"
+                android:id="@+id/user_settings_fname"
+                android:inputType="text"
+                android:text="First Name"
+                android:background="@drawable/rounded_square_bg"
+                android:backgroundTint="#fff"
+                android:hint="First Name"
+                android:padding="14dp"
+                android:layout_marginRight="10dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_settings_name_text"
+                android:id="@+id/user_settings_sname"
+                android:inputType="text"
+                android:text="Last Name"
+                android:background="@drawable/rounded_square_bg"
+                android:backgroundTint="#fff"
+                android:hint="First Name"
+                android:padding="14dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_name"
+            android:text="Cell Number"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:id="@+id/user_settings_number_text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_number_text"
+            android:id="@+id/user_settings_number"
+            android:padding="14dp"
+            android:hint="+256756700700"
+            android:textColorHint="@color/colorEditHint2"
+            android:background="@drawable/rounded_square_bg"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="14dp"
+            android:inputType="phone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_number"
+            android:text="Email"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"
+            android:id="@+id/user_settings_email_text"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_email_text"
+            android:id="@+id/user_settings_email"
+            android:text="Email"
+            android:padding="14dp"
+            android:layout_marginTop="14dp"
+            android:textColor="#888"
+            android:background="@drawable/rounded_square_bg"
+            android:backgroundTint="#fff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_email"
+            android:text="Gender"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:id="@+id/user_settings_gender_text"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_gender_text"
+            android:layout_marginTop="14dp"
+            android:id="@+id/user_settings_gender_group">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Male"
+                android:id="@+id/user_settings_gender_male"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Female"
+                android:id="@+id/user_settings_gender_female"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_gender_group"
+            android:layout_marginTop="20dp"
+            android:text="Date of Birth"
+            android:textColor="#000"
+            android:id="@+id/user_settings_dob_text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_settings_dob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_settings_dob_text"
+            android:layout_marginTop="14dp"
+            android:padding="14dp"
+            android:background="@drawable/rounded_square_bg"
+            android:backgroundTint="#fff"
+            android:hint="03/02/90"
+            android:textColorHint="@color/colorEditHint2"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/settings_progress"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

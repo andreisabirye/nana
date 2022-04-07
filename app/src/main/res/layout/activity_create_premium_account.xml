@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".create_premium_account"
+    android:background="@color/colorPrimary"
+    android:padding="20dp"
+    android:fillViewport="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/create_premium_account_back"
+        android:src="@drawable/icon_material_arrow_back_1"
+        android:tint="#ffffff"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true"
+        android:layout_marginTop="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_create_premium_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:background="@drawable/create_a_businessaccount_"
+        />
+
+        <TextView
+            android:id="@+id/text_create_premium_business_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Business Location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_account" />
+
+        <Spinner
+        android:id="@+id/create_premium_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_background"
+        app:layout_constraintTop_toBottomOf="@+id/text_create_premium_business_location"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+            android:padding="16dp"
+        android:paddingStart="60dp"
+        android:entries="@array/spinner_cities"/>
+
+        <ImageView
+            android:id="@+id/create_premium_location_"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:src="@drawable/rectangle__12"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="@+id/create_premium_location"
+            app:layout_constraintEnd_toEndOf="@+id/create_premium_location"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/create_premium_location"
+            app:layout_constraintTop_toTopOf="@id/create_premium_location"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/create_premium_location_"
+        app:layout_constraintStart_toStartOf="@id/create_premium_location_"
+        app:layout_constraintBottom_toBottomOf="@id/create_premium_location_"
+        app:layout_constraintEnd_toEndOf="@id/create_premium_location_"
+        android:src="@drawable/icon_map_location_arrow"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/create_premium_location"
+            app:layout_constraintTop_toTopOf="@id/create_premium_location"
+            app:layout_constraintBottom_toBottomOf="@id/create_premium_location"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/icon_ionic_ios_arrow_forward_1"/>
+
+    <TextView
+        android:id="@+id/text_create_premium_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_premium_location"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Registration Name"/>
+
+    <EditText
+        android:id="@+id/create_premium_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_create_premium_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_background"
+        android:hint="Name"
+        android:textColorHint="@color/colorEditHint"
+        android:padding="16dp"
+        android:inputType="text"
+        />
+
+        <TextView
+            android:id="@+id/text_create_premium_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/create_premium_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="Description"/>
+
+        <EditText
+            android:id="@+id/create_premium_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_description"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_background"
+            android:hint="Type Here"
+            android:textColorHint="@color/colorEditHint"
+            android:padding="16dp"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            />
+
+    <TextView
+        android:id="@+id/text_create_premium_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_premium_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Email"/>
+
+    <EditText
+        android:id="@+id/create_premium_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_create_premium_email"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_background"
+        android:hint="Business Email"
+        android:padding="16dp"
+        android:textColorHint="@color/colorEditHint"
+        android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_create_premium_password"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/create_premium_email"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Password"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#FFFFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_password"
+            android:id="@+id/create_premium_password_wrapper">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_background"
+                android:layout_marginTop="16dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+                android:id="@+id/create_premium_password"/>
+
+            <TextView
+                android:id="@+id/password_tip_premium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="At least 8 characters and a Capital letter"
+                android:textSize="12sp"
+                android:textColor="#8E0000"
+                android:visibility="gone"/>
+        </com.google.android.material.textfield.TextInputLayout>    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_create_premium_certificate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_premium_password_wrapper"
+        android:layout_marginTop="20dp"
+        android:text="Registration Certificate"/>
+
+    <ImageButton
+        android:id="@+id/create_premium_certificate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_premium_certificate"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle_1556"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_awesome_image"
+        app:layout_constraintBottom_toBottomOf="@id/create_premium_certificate"
+        app:layout_constraintEnd_toEndOf="@id/create_premium_certificate"
+        app:layout_constraintStart_toStartOf="@id/create_premium_certificate"
+        app:layout_constraintTop_toTopOf="@id/create_premium_certificate"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upload_1"
+        app:layout_constraintBottom_toBottomOf="@id/create_premium_certificate"
+        app:layout_constraintEnd_toEndOf="@id/create_premium_certificate"
+        app:layout_constraintStart_toStartOf="@id/create_premium_certificate"
+        app:layout_constraintTop_toTopOf="@id/create_premium_certificate"
+        app:layout_constraintVertical_bias="0.533" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/certificate_view"
+            app:layout_constraintTop_toBottomOf="@id/create_premium_certificate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_create_premium_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/certificate_view"
+            android:layout_marginTop="20dp"
+            android:text="Profile Picture"/>
+
+        <ImageButton
+            android:id="@+id/create_premium_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_photo"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle_1556"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_awesome_image"
+            app:layout_constraintBottom_toBottomOf="@id/create_premium_photo"
+            app:layout_constraintEnd_toEndOf="@id/create_premium_photo"
+            app:layout_constraintStart_toStartOf="@id/create_premium_photo"
+            app:layout_constraintTop_toTopOf="@id/create_premium_photo"
+            app:layout_constraintVertical_bias="0.323" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/upload_1"
+            app:layout_constraintBottom_toBottomOf="@id/create_premium_photo"
+            app:layout_constraintEnd_toEndOf="@id/create_premium_photo"
+            app:layout_constraintStart_toStartOf="@id/create_premium_photo"
+            app:layout_constraintTop_toTopOf="@id/create_premium_photo"
+            app:layout_constraintVertical_bias="0.533" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/photo_view_2"
+            app:layout_constraintTop_toBottomOf="@id/create_premium_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text_create_premium_account_offered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/photo_view_2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Services Offered (Pick at least 1)"
+            android:layout_marginTop="20dp"/>
+
+        <Spinner
+            android:id="@+id/create_premium_offered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_account_offered"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/edit_background"
+            android:entries="@array/spinner_services_premium"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/create_premium_offered"
+            app:layout_constraintTop_toTopOf="@id/create_premium_offered"
+            app:layout_constraintBottom_toBottomOf="@id/create_premium_offered"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/icon_ionic_ios_arrow_forward_1"/>
+
+        <TextView
+            android:id="@+id/text_create_premium_account_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/create_premium_offered"
+            android:text="Prices/pc"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_premium_offered_prices"
+            app:layout_constraintTop_toBottomOf="@id/text_create_premium_account_prices"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="20dp"
+            android:background="@drawable/button_bg"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/cleaner_price_area_2"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/text_cleaner_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="Cleaning @Room"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_cleaner_price_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint="11"
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/cleaner_price2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/cleaner_price2"
+                    app:layout_constraintTop_toTopOf="@id/cleaner_price2"
+                    app:layout_constraintBottom_toBottomOf="@id/cleaner_price2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area1_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area1_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area1_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area1_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cleaner_price_area_2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/carwash_price_area_2"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/text_carwash_price_salon_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Carwash - Salon Cars"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_carwash_price_salon_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint=""
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/carwash_price_salon_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/carwash_price_salon_2"
+                    app:layout_constraintTop_toTopOf="@id/carwash_price_salon_2"
+                    app:layout_constraintBottom_toBottomOf="@id/carwash_price_salon_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area2_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area2_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area2_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area2_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/text_carwash_price_suv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carwash_price_salon_2"
+                    android:layout_marginTop="16dp"
+                    android:text="Carwash - SUV Cars"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_carwash_price_suv_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint=""
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/carwash_price_suv_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area2_2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/carwash_price_suv_2"
+                    app:layout_constraintTop_toTopOf="@id/carwash_price_suv_2"
+                    app:layout_constraintBottom_toBottomOf="@id/carwash_price_suv_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area2_2_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area2_2_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area2_2_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area2_2_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/text_carwash_price_bus_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carwash_price_suv_2"
+                    android:layout_marginTop="16dp"
+                    android:text="Carwash - Buses"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_carwash_price_bus_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint=""
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/carwash_price_bus_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area2_3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/carwash_price_bus_2"
+                    app:layout_constraintTop_toTopOf="@id/carwash_price_bus_2"
+                    app:layout_constraintBottom_toBottomOf="@id/carwash_price_bus_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area2_3_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area2_3_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area2_3_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area2_3_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/text_carwash_price_lorries_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carwash - Lorries"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#ffffff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carwash_price_bus_2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_carwash_price_lorries_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint=""
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/carwash_price_lorries_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area2_4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/carwash_price_lorries_2"
+                    app:layout_constraintTop_toTopOf="@id/carwash_price_lorries_2"
+                    app:layout_constraintBottom_toBottomOf="@id/carwash_price_lorries_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area2_4_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area2_4_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area2_4_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area2_4_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/carwash_price_area_2"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/cooking_price_area_2"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/text_cooking_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Cooking /10 People"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_cooking_price_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint="45"
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/cooking_price_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/cooking_price_2"
+                    app:layout_constraintTop_toTopOf="@id/cooking_price_2"
+                    app:layout_constraintBottom_toBottomOf="@id/cooking_price_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area3_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area3_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area3_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area3_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cooking_price_area_2"
+                android:id="@+id/shopping_price_area_2"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/text_shopping_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Shopping"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_shopping_price_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint="45"
+                    android:id="@+id/shopping_price_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/shopping_price_2"
+                    app:layout_constraintTop_toTopOf="@id/shopping_price_2"
+                    app:layout_constraintBottom_toBottomOf="@id/shopping_price_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area4_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area4_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area4_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area4_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shopping_price_area_2"
+                android:id="@+id/compound_price_area_2"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/text_compound_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Compound @Sq Mtr"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_compound_price_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint="45"
+                    android:id="@+id/compound_price_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/compound_price_2"
+                    app:layout_constraintTop_toTopOf="@id/compound_price_2"
+                    app:layout_constraintBottom_toBottomOf="@id/compound_price_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area5_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area5_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area5_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area5_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/compound_price_area_2"
+                android:id="@+id/laundry_price_area_2"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_laundry_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Laundry @Cloth"
+                    android:textColor="#ffffff"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_laundry_price_2"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="66dp"
+                    android:padding="16dp"
+                    android:hint="45"
+                    android:textColorHint="@color/colorEditHint"
+                    android:id="@+id/laundry_price_2"
+                    android:inputType="number"/>
+
+                <ImageView
+                    android:id="@+id/unit_area6_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/laundry_price_2"
+                    app:layout_constraintTop_toTopOf="@id/laundry_price_2"
+                    app:layout_constraintBottom_toBottomOf="@id/laundry_price_2"
+                    android:background="@drawable/rectangle__12"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/unit_area6_2"
+                    app:layout_constraintTop_toTopOf="@id/unit_area6_2"
+                    app:layout_constraintBottom_toBottomOf="@id/unit_area6_2"
+                    app:layout_constraintEnd_toEndOf="@id/unit_area6_2"
+                    android:text="Ugx"
+                    android:textColor="#ffffff"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle__15"
+        app:layout_constraintTop_toBottomOf="@id/create_premium_offered_prices"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="createPremiumAccount"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

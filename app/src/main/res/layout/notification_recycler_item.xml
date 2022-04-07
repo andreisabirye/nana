@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginTop="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_square_bg"
+        android:backgroundTint="#FFFFFF"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/user_notification_service_pic_area"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintVertical_bias="0">
+
+            <ImageView
+                android:id="@+id/user_notification_service_pic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/image__5"
+                android:padding="10dp"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_white_mask"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_notifications_msg"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toEndOf="@id/user_notification_service_pic_area"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Juliet just responded to your request, find out"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_notifications_msg"
+            android:id="@+id/user_notifications_timestamp"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:text="Mar, 30, 2022"
+            android:textColor="#80000000"
+            app:layout_constraintVertical_bias="1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

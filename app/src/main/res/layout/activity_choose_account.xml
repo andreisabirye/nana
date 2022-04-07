@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".chooseAccount"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/choose_account_back"
+        android:src="@drawable/icon_material_arrow_back_1"
+        android:tint="#ffffff"/>
+
+    <TextView
+        android:id="@+id/text_what_are_you_here_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/what_are_you_herefor_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/account_type_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle__2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_what_are_you_here_for" />
+
+    <ImageView
+        android:id="@+id/ellipse_account_type_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/ellipse_22"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn1"
+        app:layout_constraintStart_toStartOf="@id/account_type_btn1"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search__1_"
+        app:layout_constraintBottom_toBottomOf="@id/ellipse_account_type_btn1"
+        app:layout_constraintEnd_toEndOf="@id/ellipse_account_type_btn1"
+        app:layout_constraintStart_toStartOf="@id/ellipse_account_type_btn1"
+        app:layout_constraintTop_toTopOf="@id/ellipse_account_type_btn1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn1"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn1"
+        app:layout_constraintStart_toEndOf="@id/ellipse_account_type_btn1"
+        android:layout_marginLeft="16dp"
+        android:text="To find Service Providers"
+        android:textColor="#000000"/>
+
+    <ImageButton
+        android:id="@+id/account_type_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle__2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_type_btn1" />
+
+    <ImageView
+        android:id="@+id/ellipse_account_type_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/ellipse_22"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn2"
+        app:layout_constraintStart_toStartOf="@id/account_type_btn2"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/engineer"
+        app:layout_constraintBottom_toBottomOf="@id/ellipse_account_type_btn2"
+        app:layout_constraintEnd_toEndOf="@id/ellipse_account_type_btn2"
+        app:layout_constraintStart_toStartOf="@id/ellipse_account_type_btn2"
+        app:layout_constraintTop_toTopOf="@id/ellipse_account_type_btn2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn2"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn2"
+        app:layout_constraintStart_toEndOf="@id/ellipse_account_type_btn2"
+        android:layout_marginLeft="16dp"
+        android:text="To Provide My Services"
+        android:textColor="#000000"/>
+
+    <ImageButton
+        android:id="@+id/account_type_btn3"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle__2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_type_btn2" />
+
+    <ImageView
+        android:id="@+id/ellipse_account_type_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/ellipse_22"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn3"
+        app:layout_constraintStart_toStartOf="@id/account_type_btn3"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn3" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/store"
+        app:layout_constraintBottom_toBottomOf="@id/ellipse_account_type_btn3"
+        app:layout_constraintEnd_toEndOf="@id/ellipse_account_type_btn3"
+        app:layout_constraintStart_toStartOf="@id/ellipse_account_type_btn3"
+        app:layout_constraintTop_toTopOf="@id/ellipse_account_type_btn3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="Provide Premium Services"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@id/account_type_btn3"
+        app:layout_constraintEnd_toEndOf="@+id/account_type_btn3"
+        app:layout_constraintStart_toEndOf="@id/ellipse_account_type_btn3"
+        app:layout_constraintTop_toTopOf="@id/account_type_btn3"
+        app:layout_constraintHorizontal_bias="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

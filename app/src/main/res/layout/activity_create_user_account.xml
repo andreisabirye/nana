@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createUserAccount"
+    android:background="@color/colorPrimary"
+    android:padding="20dp"
+    android:fillViewport="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/create_user_account_back"
+        android:src="@drawable/icon_material_arrow_back_1"
+        android:tint="#ffffff"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true"
+        android:layout_marginTop="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_create_user_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/create_a_user_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_create_user_account_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text_create_user_account"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Email"/>
+
+    <EditText
+        android:id="@+id/create_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_email"
+        android:hint="Email"
+        android:background="@drawable/edit_background"
+        android:padding="16dp"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:id="@+id/text_create_user_account_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_email"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Password"/>
+
+    <EditText
+        android:id="@+id/create_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_password"
+        android:hint="Password"
+        android:textColorHint="@color/colorEditHint"
+        android:background="@drawable/edit_background"
+        android:padding="16dp"
+        android:inputType="textPassword"/>
+
+        <TextView
+            android:id="@+id/text_create_user_account_password_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/create_user_password"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:text="Confirm Password"/>
+
+        <EditText
+            android:id="@+id/create_user_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_user_account_password_confirm"
+            android:hint="Password"
+            android:textColorHint="@color/colorEditHint"
+            android:background="@drawable/edit_background"
+            android:padding="16dp"
+            android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/text_create_user_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_password_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Name"
+        android:textColor="#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/create_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_name"
+        android:hint="John"
+        android:textColorHint="@color/colorEditHint"
+        android:background="@drawable/edit_background"
+        android:padding="16dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/text_create_user_account_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Surname"/>
+
+    <EditText
+        android:id="@+id/create_user_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_surname"
+        android:hint="Doe"
+        android:textColorHint="@color/colorEditHint"
+        android:background="@drawable/edit_background"
+        android:padding="16dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/text_create_user_account_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_surname"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Date Of Birth"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/create_user_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_dob"
+        android:hint="10/02/2020"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColorHint="@color/colorEditHint"
+        android:background="@drawable/edit_background"
+        android:padding="16dp"
+        android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/text_create_user_account_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_dob"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="City"
+        android:textColor="#ffffff" />
+
+    <Spinner
+        android:id="@+id/create_user_city_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_create_user_account_city"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:background="@drawable/edit_background"
+        android:entries="@array/spinner_cities"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/create_user_city_spinner"
+        app:layout_constraintTop_toTopOf="@id/create_user_city_spinner"
+        app:layout_constraintBottom_toBottomOf="@id/create_user_city_spinner"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/icon_ionic_ios_arrow_forward_1"/>
+
+    <Button
+        android:id="@+id/create_user_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/create_user_city_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle__15"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="Sign Up"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/createUserProgress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:elevation="2dp"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

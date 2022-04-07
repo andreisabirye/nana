@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_provider"
+    app:startDestination="@id/provider_navigation_home">
+    <fragment
+        android:id="@+id/provider_navigation_home"
+        android:name="com.dlc.nana.ProviderHomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_provider_home" >
+        <action
+            android:id="@+id/action_providerHome_to_requests"
+            app:destination="@id/provider_navigation_requests" />
+        <action
+            android:id="@+id/action_providerHome_to_notifications"
+            app:destination="@id/provider_navigation_notifications" />
+        <action
+            android:id="@+id/action_providerHome_to_profile"
+            app:destination="@id/provider_navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/provider_navigation_requests"
+        android:name="com.dlc.nana.ui.requests.RequestsFragment"
+        android:label="@string/title_requests"
+        tools:layout="@layout/requests_fragment" />
+
+    <fragment
+        android:id="@+id/provider_navigation_notifications"
+        android:name="com.dlc.nana.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/provider_navigation_profile"
+        android:name="com.dlc.nana.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    />
+</navigation>
